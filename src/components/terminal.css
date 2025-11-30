@@ -1,0 +1,250 @@
+/**
+ * Terminal & Log Components
+ * 
+ * Terminal-style log viewers and console output displays.
+ */
+
+/* ========================================
+   Terminal Container
+   ======================================== */
+
+.mds-terminal {
+  background: var(--mds-surface-900);
+  border-radius: var(--mds-radius-lg);
+  overflow: hidden;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Menlo', monospace;
+}
+
+.mds-terminal-header {
+  display: flex;
+  align-items: center;
+  gap: var(--mds-space-2);
+  padding: var(--mds-space-3) var(--mds-space-4);
+  background: var(--mds-surface-800);
+  border-bottom: 1px solid var(--mds-surface-700);
+}
+
+.mds-terminal-dots {
+  display: flex;
+  gap: var(--mds-space-2);
+}
+
+.mds-terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.mds-terminal-dot-red {
+  background: #ff5f57;
+}
+
+.mds-terminal-dot-yellow {
+  background: #ffbd2e;
+}
+
+.mds-terminal-dot-green {
+  background: #28ca41;
+}
+
+.mds-terminal-title {
+  flex: 1;
+  text-align: center;
+  font-size: var(--mds-text-xs);
+  color: var(--mds-surface-400);
+  font-weight: 500;
+}
+
+/* ========================================
+   Terminal Body
+   ======================================== */
+
+.mds-terminal-body {
+  padding: var(--mds-space-4) var(--mds-space-5);
+  max-height: 400px;
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar for terminal */
+.mds-terminal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mds-terminal-body::-webkit-scrollbar-track {
+  background: var(--mds-surface-800);
+}
+
+.mds-terminal-body::-webkit-scrollbar-thumb {
+  background: var(--mds-surface-600);
+  border-radius: 4px;
+}
+
+.mds-terminal-body::-webkit-scrollbar-thumb:hover {
+  background: var(--mds-surface-500);
+}
+
+/* ========================================
+   Terminal Lines
+   ======================================== */
+
+.mds-terminal-line {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--mds-space-2);
+  margin-bottom: var(--mds-space-1);
+}
+
+.mds-terminal-prompt {
+  color: var(--mds-primary-400);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.mds-terminal-text {
+  color: var(--mds-surface-300);
+  word-break: break-word;
+}
+
+.mds-terminal-timestamp {
+  color: var(--mds-surface-500);
+  font-size: var(--mds-text-xs);
+  flex-shrink: 0;
+}
+
+/* Line Variants */
+.mds-terminal-success {
+  color: var(--mds-success-400);
+}
+
+.mds-terminal-error {
+  color: var(--mds-error-400);
+}
+
+.mds-terminal-warning {
+  color: var(--mds-warning-400);
+}
+
+.mds-terminal-info {
+  color: var(--mds-info-400);
+}
+
+.mds-terminal-muted {
+  color: var(--mds-surface-500);
+}
+
+/* ========================================
+   Terminal Empty State
+   ======================================== */
+
+.mds-terminal-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--mds-space-8);
+  color: var(--mds-surface-500);
+  text-align: center;
+}
+
+.mds-terminal-empty svg {
+  width: 32px;
+  height: 32px;
+  margin-bottom: var(--mds-space-3);
+  opacity: 0.5;
+}
+
+/* ========================================
+   Log Table (Alternative to Terminal)
+   ======================================== */
+
+.mds-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--mds-text-sm);
+}
+
+.mds-log-table th,
+.mds-log-table td {
+  padding: var(--mds-space-3) var(--mds-space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--mds-border);
+}
+
+.mds-log-table th {
+  font-weight: 600;
+  color: var(--mds-text);
+  background: var(--mds-surface-50);
+  font-size: var(--mds-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mds-log-table tr:hover td {
+  background: var(--mds-surface-50);
+}
+
+.mds-log-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Log Level Badges */
+.mds-log-level {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--mds-space-1) var(--mds-space-2);
+  border-radius: var(--mds-radius-sm);
+  font-size: var(--mds-text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mds-log-level-info {
+  background: var(--mds-info-100);
+  color: var(--mds-info-700);
+}
+
+.mds-log-level-success {
+  background: var(--mds-success-100);
+  color: var(--mds-success-700);
+}
+
+.mds-log-level-warning {
+  background: var(--mds-warning-100);
+  color: var(--mds-warning-700);
+}
+
+.mds-log-level-error {
+  background: var(--mds-error-100);
+  color: var(--mds-error-700);
+}
+
+/* ========================================
+   File Path Display
+   ======================================== */
+
+.mds-file-path {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  font-size: var(--mds-text-sm);
+  color: var(--mds-text-secondary);
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========================================
+   Timestamp Display
+   ======================================== */
+
+.mds-timestamp {
+  color: var(--mds-text-secondary);
+  font-size: var(--mds-text-sm);
+}
+
+.mds-timestamp-time {
+  color: var(--mds-text-tertiary);
+  font-size: var(--mds-text-xs);
+}
+

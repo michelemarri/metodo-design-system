@@ -97,4 +97,15 @@
 /* Meta Box Components */
 @import './components/metabox.css';
 
+/* Progress Bars */
+@import './components/progress.css';
+
+/* Stats & Dashboard Cards */
+@import './components/stats.css';
+
+/* Terminal & Log Viewers */
+@import './components/terminal.css';
+
+/* Modals & Dialogs */
+@import './components/modal.css';
 

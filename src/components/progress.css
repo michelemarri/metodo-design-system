@@ -1,0 +1,208 @@
+/**
+ * Progress Bar Components
+ * 
+ * Progress indicators for migration, upload, and batch operations.
+ */
+
+/* ========================================
+   Basic Progress Bar
+   ======================================== */
+
+.mds-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--mds-space-4);
+}
+
+.mds-progress-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--mds-surface-100);
+  border-radius: var(--mds-radius-full);
+  overflow: hidden;
+}
+
+.mds-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--mds-primary), var(--mds-primary-400));
+  border-radius: var(--mds-radius-full);
+  transition: width 0.3s ease;
+}
+
+.mds-progress-percent {
+  font-size: var(--mds-text-sm);
+  font-weight: 600;
+  color: var(--mds-text);
+  min-width: 45px;
+  text-align: right;
+}
+
+/* ========================================
+   Large Progress Bar
+   ======================================== */
+
+.mds-progress-lg .mds-progress-bar {
+  height: 12px;
+}
+
+.mds-progress-lg .mds-progress-percent {
+  font-size: var(--mds-text-base);
+}
+
+/* ========================================
+   Animated Progress (for active operations)
+   ======================================== */
+
+.mds-progress-animated .mds-progress-fill {
+  background: linear-gradient(
+    90deg,
+    var(--mds-primary),
+    var(--mds-primary-400),
+    var(--mds-primary)
+  );
+  background-size: 200% 100%;
+  animation: mds-progress-shimmer 2s ease-in-out infinite;
+}
+
+@keyframes mds-progress-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ========================================
+   Progress with Label
+   ======================================== */
+
+.mds-progress-labeled {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mds-space-2);
+}
+
+.mds-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mds-progress-label {
+  font-size: var(--mds-text-sm);
+  font-weight: 500;
+  color: var(--mds-text);
+}
+
+.mds-progress-value {
+  font-size: var(--mds-text-sm);
+  color: var(--mds-text-secondary);
+}
+
+/* ========================================
+   Progress Badge (pill style)
+   ======================================== */
+
+.mds-progress-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mds-space-2);
+  padding: var(--mds-space-1) var(--mds-space-3);
+  background: var(--mds-primary);
+  color: white;
+  border-radius: var(--mds-radius-full);
+  font-size: var(--mds-text-xs);
+  font-weight: 600;
+}
+
+/* ========================================
+   Progress Variants
+   ======================================== */
+
+/* Success */
+.mds-progress-success .mds-progress-fill {
+  background: linear-gradient(90deg, var(--mds-success), var(--mds-success-400));
+}
+
+/* Warning */
+.mds-progress-warning .mds-progress-fill {
+  background: linear-gradient(90deg, var(--mds-warning), var(--mds-warning-400));
+}
+
+/* Error */
+.mds-progress-error .mds-progress-fill {
+  background: linear-gradient(90deg, var(--mds-error), var(--mds-error-400));
+}
+
+/* ========================================
+   Progress Container (for batch operations)
+   ======================================== */
+
+.mds-progress-container {
+  padding: var(--mds-space-6);
+  background: var(--mds-surface-50);
+  border-radius: var(--mds-radius-lg);
+  border: 1px solid var(--mds-border);
+}
+
+.mds-progress-container .mds-progress {
+  margin-bottom: var(--mds-space-4);
+}
+
+.mds-progress-stats {
+  display: flex;
+  gap: var(--mds-space-6);
+  font-size: var(--mds-text-sm);
+  color: var(--mds-text-secondary);
+}
+
+.mds-progress-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--mds-space-2);
+}
+
+.mds-progress-stat strong {
+  color: var(--mds-text);
+  font-weight: 600;
+}
+
+/* ========================================
+   Circular Progress (for smaller indicators)
+   ======================================== */
+
+.mds-progress-circular {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.mds-progress-circular svg {
+  transform: rotate(-90deg);
+}
+
+.mds-progress-circular-bg {
+  fill: none;
+  stroke: var(--mds-surface-200);
+  stroke-width: 4;
+}
+
+.mds-progress-circular-fill {
+  fill: none;
+  stroke: var(--mds-primary);
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.mds-progress-circular-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--mds-text-xs);
+  font-weight: 600;
+  color: var(--mds-text);
+}
+
