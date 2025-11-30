@@ -1,0 +1,238 @@
+/**
+ * Animations
+ */
+
+/* Keyframes */
+@keyframes mds-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mds-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mds-fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mds-slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mds-slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mds-scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mds-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mds-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes mds-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes mds-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Animation Classes */
+.mds-animate-fade-in {
+  animation: mds-fadeIn 0.3s ease-out forwards;
+}
+
+.mds-animate-fade-in-up {
+  animation: mds-fadeInUp 0.4s ease-out forwards;
+}
+
+.mds-animate-fade-in-down {
+  animation: mds-fadeInDown 0.4s ease-out forwards;
+}
+
+.mds-animate-slide-in-right {
+  animation: mds-slideInRight 0.3s ease-out forwards;
+}
+
+.mds-animate-slide-in-left {
+  animation: mds-slideInLeft 0.3s ease-out forwards;
+}
+
+.mds-animate-scale-in {
+  animation: mds-scaleIn 0.2s ease-out forwards;
+}
+
+.mds-animate-spin,
+.mds-spin {
+  animation: mds-spin 1s linear infinite;
+}
+
+.mds-animate-pulse {
+  animation: mds-pulse 2s ease-in-out infinite;
+}
+
+.mds-animate-bounce {
+  animation: mds-bounce 1s ease-in-out infinite;
+}
+
+/* Shimmer/Skeleton Loading */
+.mds-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--mds-surface-100) 0%,
+    var(--mds-surface-200) 50%,
+    var(--mds-surface-100) 100%
+  );
+  background-size: 200% 100%;
+  animation: mds-shimmer 1.5s linear infinite;
+  border-radius: var(--mds-radius-sm);
+}
+
+.mds-skeleton-text {
+  height: 1em;
+  margin-bottom: var(--mds-space-2);
+}
+
+.mds-skeleton-text:last-child {
+  width: 70%;
+}
+
+.mds-skeleton-circle {
+  border-radius: var(--mds-radius-full);
+}
+
+.mds-skeleton-rect {
+  border-radius: var(--mds-radius);
+}
+
+/* Stagger Animation Delays */
+.mds-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.mds-stagger > *:nth-child(2) { animation-delay: 50ms; }
+.mds-stagger > *:nth-child(3) { animation-delay: 100ms; }
+.mds-stagger > *:nth-child(4) { animation-delay: 150ms; }
+.mds-stagger > *:nth-child(5) { animation-delay: 200ms; }
+.mds-stagger > *:nth-child(6) { animation-delay: 250ms; }
+.mds-stagger > *:nth-child(7) { animation-delay: 300ms; }
+.mds-stagger > *:nth-child(8) { animation-delay: 350ms; }
+
+/* Hover Animations */
+.mds-hover-lift {
+  transition: transform var(--mds-transition), box-shadow var(--mds-transition);
+}
+
+.mds-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--mds-shadow-lg);
+}
+
+.mds-hover-scale {
+  transition: transform var(--mds-transition);
+}
+
+.mds-hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.mds-hover-glow {
+  transition: box-shadow var(--mds-transition);
+}
+
+.mds-hover-glow:hover {
+  box-shadow: var(--mds-shadow-glow);
+}
+
+/* Loading States */
+.mds-loading-fields {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--mds-space-2);
+  padding: var(--mds-space-6);
+  color: var(--mds-text-secondary);
+  font-size: var(--mds-text-sm);
+}
+
+.mds-loading-fields .dashicons {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+

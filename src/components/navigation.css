@@ -1,0 +1,98 @@
+/**
+ * Tab Navigation
+ */
+
+.mds-tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mds-space-1);
+  margin-bottom: var(--mds-space-6);
+  padding: var(--mds-space-1);
+  background: var(--mds-surface-100);
+  border-radius: var(--mds-radius-lg);
+}
+
+.mds-tab-link {
+  display: flex;
+  align-items: center;
+  gap: var(--mds-space-2);
+  padding: var(--mds-space-3) var(--mds-space-5);
+  color: var(--mds-text-secondary);
+  font-size: var(--mds-text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: var(--mds-radius);
+  transition: all var(--mds-transition);
+  white-space: nowrap;
+  position: relative;
+}
+
+.mds-tab-link:hover {
+  color: var(--mds-text);
+  background: var(--mds-bg-elevated);
+}
+
+.mds-tab-link.active {
+  color: var(--mds-primary);
+  background: var(--mds-bg-elevated);
+  box-shadow: var(--mds-shadow-sm);
+}
+
+.mds-tab-link .dashicons {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  transition: transform var(--mds-transition);
+}
+
+.mds-tab-link:hover .dashicons {
+  transform: scale(1.1);
+}
+
+.mds-tab-link.active .dashicons {
+  color: var(--mds-primary);
+}
+
+/* Tab Content */
+.mds-tab-content {
+  background: var(--mds-bg-elevated);
+  border-radius: var(--mds-radius-xl);
+  box-shadow: var(--mds-shadow);
+  padding: var(--mds-space-8);
+  border: 1px solid var(--mds-border);
+  animation: mds-fadeInUp 0.3s ease-out;
+}
+
+.mds-tab-panel {
+  animation: mds-fadeIn 0.3s ease-out;
+}
+
+/* Inline Navigation */
+.mds-inline-nav {
+  display: flex;
+  gap: var(--mds-space-4);
+  padding-bottom: var(--mds-space-4);
+  border-bottom: 1px solid var(--mds-border);
+  margin-bottom: var(--mds-space-6);
+}
+
+.mds-inline-nav a {
+  font-size: var(--mds-text-sm);
+  font-weight: 500;
+  color: var(--mds-text-secondary);
+  padding-bottom: var(--mds-space-4);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all var(--mds-transition);
+}
+
+.mds-inline-nav a:hover {
+  color: var(--mds-text);
+}
+
+.mds-inline-nav a.active {
+  color: var(--mds-primary);
+  border-bottom-color: var(--mds-primary);
+}
+
+

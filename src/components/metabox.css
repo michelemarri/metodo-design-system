@@ -1,0 +1,191 @@
+/**
+ * Meta Box Styles
+ */
+
+.mds-meta-box {
+  padding: var(--mds-space-4);
+  font-family: var(--mds-font-sans);
+}
+
+.mds-meta-box-section {
+  margin-bottom: var(--mds-space-5);
+}
+
+.mds-meta-box-section:last-child {
+  margin-bottom: 0;
+}
+
+.mds-meta-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--mds-space-4);
+}
+
+.mds-meta-box-title {
+  font-size: var(--mds-text-sm);
+  font-weight: 600;
+  color: var(--mds-text);
+  display: flex;
+  align-items: center;
+  gap: var(--mds-space-2);
+}
+
+.mds-meta-box-title .dashicons {
+  color: var(--mds-primary);
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Schema Toggle in Meta Box */
+.mds-meta-box .mds-toggle {
+  width: 44px;
+  height: 24px;
+}
+
+.mds-meta-box .mds-toggle-slider::before {
+  width: 18px;
+  height: 18px;
+}
+
+.mds-meta-box .mds-toggle input:checked + .mds-toggle-slider::before {
+  transform: translateX(20px);
+}
+
+/* Schema Type Select in Meta Box */
+.mds-meta-box .mds-select {
+  max-width: 100%;
+}
+
+/* Quick Info */
+.mds-meta-box-info {
+  display: flex;
+  align-items: center;
+  gap: var(--mds-space-3);
+  padding: var(--mds-space-3);
+  background: var(--mds-surface-50);
+  border-radius: var(--mds-radius);
+  font-size: var(--mds-text-sm);
+  color: var(--mds-text-secondary);
+}
+
+.mds-meta-box-info .dashicons {
+  color: var(--mds-primary);
+}
+
+/* Preview in Meta Box */
+.mds-meta-box .mds-preview-section {
+  padding: var(--mds-space-4);
+}
+
+.mds-meta-box .mds-schema-preview {
+  max-height: 200px;
+  font-size: 11px;
+}
+
+/* Actions */
+.mds-meta-box-actions {
+  display: flex;
+  gap: var(--mds-space-2);
+  margin-top: var(--mds-space-3);
+}
+
+.mds-meta-box-actions .button {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Compact Mode */
+.mds-meta-box-compact .mds-meta-box-section {
+  margin-bottom: var(--mds-space-3);
+}
+
+.mds-meta-box-compact .mds-field {
+  margin-bottom: var(--mds-space-3);
+}
+
+/* Override Status */
+.mds-override-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mds-space-1);
+  font-size: var(--mds-text-xs);
+  color: var(--mds-warning-600);
+  background: var(--mds-warning-50);
+  padding: var(--mds-space-1) var(--mds-space-2);
+  border-radius: var(--mds-radius-sm);
+}
+
+.mds-override-status .dashicons {
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
+}
+
+/* Collapsible Panel */
+.mds-meta-box-panel {
+  border: 1px solid var(--mds-border);
+  border-radius: var(--mds-radius);
+  overflow: hidden;
+}
+
+.mds-meta-box-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--mds-space-3) var(--mds-space-4);
+  background: var(--mds-surface-50);
+  cursor: pointer;
+  transition: background var(--mds-transition-fast);
+}
+
+.mds-meta-box-panel-header:hover {
+  background: var(--mds-surface-100);
+}
+
+.mds-meta-box-panel-header h4 {
+  font-size: var(--mds-text-sm);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--mds-space-2);
+}
+
+.mds-meta-box-panel-toggle {
+  transition: transform var(--mds-transition);
+}
+
+.mds-meta-box-panel.collapsed .mds-meta-box-panel-toggle {
+  transform: rotate(-90deg);
+}
+
+.mds-meta-box-panel-content {
+  padding: var(--mds-space-4);
+  border-top: 1px solid var(--mds-border);
+}
+
+.mds-meta-box-panel.collapsed .mds-meta-box-panel-content {
+  display: none;
+}
+
+/* Empty State in Meta Box */
+.mds-meta-box-empty {
+  text-align: center;
+  padding: var(--mds-space-6);
+  color: var(--mds-text-muted);
+}
+
+.mds-meta-box-empty .dashicons {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  margin-bottom: var(--mds-space-3);
+  opacity: 0.5;
+}
+
+.mds-meta-box-empty p {
+  font-size: var(--mds-text-sm);
+  margin-bottom: var(--mds-space-3);
+}
+

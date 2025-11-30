@@ -1,0 +1,100 @@
+/**
+ * Metodo Design System
+ * 
+ * A shared design system for WordPress plugins by Metodo.
+ * 
+ * @package metodo-design-system
+ * @author  Michele Marri <info@metodo.dev>
+ * @version 1.0.0
+ */
+
+/* ========================================
+   Design Tokens (CSS Custom Properties)
+   ======================================== */
+@import './components/tokens.css';
+
+/* ========================================
+   Base & Reset (WordPress Admin compatible)
+   ======================================== */
+@import './components/base.css';
+
+/* ========================================
+   Layout Components
+   ======================================== */
+@import './components/layout.css';
+
+/* ========================================
+   Navigation (Tabs)
+   ======================================== */
+@import './components/navigation.css';
+
+/* ========================================
+   Cards & Panels
+   ======================================== */
+@import './components/cards.css';
+
+/* ========================================
+   Form Elements
+   ======================================== */
+@import './components/forms.css';
+
+/* ========================================
+   Buttons
+   ======================================== */
+@import './components/buttons.css';
+
+/* ========================================
+   Toggle Switch
+   ======================================== */
+@import './components/toggle.css';
+
+/* ========================================
+   Badges & Tags
+   ======================================== */
+@import './components/badges.css';
+
+/* ========================================
+   Tables
+   ======================================== */
+@import './components/tables.css';
+
+/* ========================================
+   Alerts & Notices
+   ======================================== */
+@import './components/alerts.css';
+
+/* ========================================
+   Utilities & Helpers
+   ======================================== */
+@import './components/utilities.css';
+
+/* ========================================
+   Animations
+   ======================================== */
+@import './components/animations.css';
+
+/* ========================================
+   Responsive
+   ======================================== */
+@import './components/responsive.css';
+
+/* ========================================
+   Extended Components
+   ======================================== */
+
+/* Code Preview & Syntax Highlighting */
+@import './components/code.css';
+
+/* Schema Components */
+@import './components/schema.css';
+
+/* Pages Components */
+@import './components/pages.css';
+
+/* Update Components */
+@import './components/update.css';
+
+/* Meta Box Components */
+@import './components/metabox.css';
+
+

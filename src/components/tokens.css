@@ -1,0 +1,150 @@
+/**
+ * Design Tokens
+ * 
+ * CSS custom properties that define the design system.
+ * Prefix: --mds- (metodo-design-system)
+ */
+
+:root {
+  /* Primary Colors - Grayscale */
+  --mds-primary-50: #fafafa;
+  --mds-primary-100: #f5f5f5;
+  --mds-primary-200: #e5e5e5;
+  --mds-primary-300: #d4d4d4;
+  --mds-primary-400: #a3a3a3;
+  --mds-primary-500: #737373;
+  --mds-primary-600: #525252;
+  --mds-primary-700: #404040;
+  --mds-primary-800: #262626;
+  --mds-primary-900: #171717;
+  --mds-primary: #171717;
+  --mds-primary-hover: #262626;
+
+  /* Accent Colors - Black */
+  --mds-accent-50: #fafafa;
+  --mds-accent-100: #f5f5f5;
+  --mds-accent-200: #e5e5e5;
+  --mds-accent-300: #d4d4d4;
+  --mds-accent-400: #a3a3a3;
+  --mds-accent-500: #525252;
+  --mds-accent-600: #262626;
+  --mds-accent-700: #171717;
+  --mds-accent: #171717;
+
+  /* Success Colors */
+  --mds-success-50: #f0fdf4;
+  --mds-success-100: #dcfce7;
+  --mds-success-200: #bbf7d0;
+  --mds-success-500: #22c55e;
+  --mds-success-600: #16a34a;
+  --mds-success-700: #15803d;
+  --mds-success: #22c55e;
+
+  /* Warning Colors */
+  --mds-warning-50: #fffbeb;
+  --mds-warning-100: #fef3c7;
+  --mds-warning-200: #fde68a;
+  --mds-warning-500: #f59e0b;
+  --mds-warning-600: #d97706;
+  --mds-warning-700: #b45309;
+  --mds-warning: #f59e0b;
+
+  /* Error Colors */
+  --mds-error-50: #fef2f2;
+  --mds-error-100: #fee2e2;
+  --mds-error-200: #fecaca;
+  --mds-error-500: #ef4444;
+  --mds-error-600: #dc2626;
+  --mds-error-700: #b91c1c;
+  --mds-error: #ef4444;
+
+  /* Surface Colors */
+  --mds-surface-50: #f8fafc;
+  --mds-surface-100: #f1f5f9;
+  --mds-surface-200: #e2e8f0;
+  --mds-surface-300: #cbd5e1;
+  --mds-surface-400: #94a3b8;
+  --mds-surface-500: #64748b;
+  --mds-surface-600: #475569;
+  --mds-surface-700: #334155;
+  --mds-surface-800: #1e293b;
+  --mds-surface-900: #0f172a;
+
+  /* Semantic */
+  --mds-bg: var(--mds-surface-50);
+  --mds-bg-elevated: #ffffff;
+  --mds-bg-muted: var(--mds-surface-100);
+  --mds-border: var(--mds-surface-200);
+  --mds-border-hover: var(--mds-surface-300);
+  --mds-text: var(--mds-surface-900);
+  --mds-text-secondary: var(--mds-surface-500);
+  --mds-text-muted: var(--mds-surface-400);
+
+  /* Typography */
+  --mds-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --mds-font-mono: 'JetBrains Mono', 'Fira Code', Monaco, Consolas, 'Liberation Mono', monospace;
+  
+  /* Font Sizes */
+  --mds-text-xs: 0.75rem;
+  --mds-text-sm: 0.875rem;
+  --mds-text-base: 1rem;
+  --mds-text-lg: 1.125rem;
+  --mds-text-xl: 1.25rem;
+  --mds-text-2xl: 1.5rem;
+  --mds-text-3xl: 1.875rem;
+
+  /* Spacing */
+  --mds-space-1: 0.25rem;
+  --mds-space-2: 0.5rem;
+  --mds-space-3: 0.75rem;
+  --mds-space-4: 1rem;
+  --mds-space-5: 1.25rem;
+  --mds-space-6: 1.5rem;
+  --mds-space-8: 2rem;
+  --mds-space-10: 2.5rem;
+  --mds-space-12: 3rem;
+
+  /* Border Radius */
+  --mds-radius-sm: 0.25rem;
+  --mds-radius: 0.5rem;
+  --mds-radius-md: 0.625rem;
+  --mds-radius-lg: 0.875rem;
+  --mds-radius-xl: 1rem;
+  --mds-radius-full: 9999px;
+
+  /* Shadows */
+  --mds-shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --mds-shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --mds-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --mds-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --mds-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --mds-shadow-glow: 0 0 20px rgb(0 0 0 / 0.15);
+
+  /* Transitions */
+  --mds-transition-fast: 150ms ease;
+  --mds-transition: 200ms ease;
+  --mds-transition-slow: 300ms ease;
+  --mds-transition-bounce: 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Z-Index */
+  --mds-z-dropdown: 50;
+  --mds-z-sticky: 100;
+  --mds-z-modal: 1000;
+  --mds-z-tooltip: 1100;
+}
+
+/* Dark mode tokens (for future use) */
+@media (prefers-color-scheme: dark) {
+  :root.mds-dark-mode {
+    --mds-bg: var(--mds-surface-900);
+    --mds-bg-elevated: var(--mds-surface-800);
+    --mds-bg-muted: var(--mds-surface-700);
+    --mds-border: var(--mds-surface-700);
+    --mds-border-hover: var(--mds-surface-600);
+    --mds-text: var(--mds-surface-50);
+    --mds-text-secondary: var(--mds-surface-400);
+    --mds-text-muted: var(--mds-surface-500);
+  }
+}
+
+

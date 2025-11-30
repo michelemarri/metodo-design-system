@@ -1,0 +1,218 @@
+/**
+ * Badges & Tags
+ */
+
+/* Base Badge */
+.mds-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mds-space-1);
+  padding: var(--mds-space-1) var(--mds-space-3);
+  font-size: var(--mds-text-xs);
+  font-weight: 500;
+  line-height: 1.4;
+  border-radius: var(--mds-radius-full);
+  white-space: nowrap;
+}
+
+.mds-badge .dashicons {
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
+}
+
+/* Badge Variants */
+.mds-badge-primary {
+  background: var(--mds-primary-100);
+  color: var(--mds-primary-700);
+}
+
+.mds-badge-accent {
+  background: var(--mds-accent-100);
+  color: var(--mds-accent-700);
+}
+
+.mds-badge-success {
+  background: var(--mds-success-100);
+  color: var(--mds-success-600);
+}
+
+.mds-badge-warning {
+  background: var(--mds-warning-100);
+  color: var(--mds-warning-600);
+}
+
+.mds-badge-error {
+  background: var(--mds-error-100);
+  color: var(--mds-error-600);
+}
+
+.mds-badge-neutral {
+  background: var(--mds-surface-100);
+  color: var(--mds-text-secondary);
+}
+
+/* Status Badges */
+.mds-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mds-space-2);
+  padding: var(--mds-space-2) var(--mds-space-4);
+  font-size: var(--mds-text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--mds-radius-full);
+  line-height: 1;
+}
+
+.mds-status-badge .dashicons {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.mds-status-badge.active {
+  background: linear-gradient(135deg, var(--mds-success-500), var(--mds-success-600));
+  color: white;
+  box-shadow: 0 2px 4px rgba(34, 197, 94, 0.3);
+}
+
+.mds-status-badge.active .dashicons {
+  color: white;
+}
+
+.mds-status-badge.inactive {
+  background: var(--mds-bg-elevated);
+  border: 1px solid var(--mds-surface-300);
+  color: var(--mds-surface-500);
+  box-shadow: var(--mds-shadow-xs);
+}
+
+.mds-status-badge.inactive .dashicons {
+  color: var(--mds-surface-400);
+}
+
+/* Version Badge */
+.mds-version-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mds-space-2);
+  padding: var(--mds-space-2) var(--mds-space-4);
+  font-size: var(--mds-text-sm);
+  font-weight: 600;
+  border-radius: var(--mds-radius-full);
+}
+
+.mds-version-badge.pro {
+  background: linear-gradient(135deg, #ffd700, #ffb347);
+  color: #5c4a00;
+  box-shadow: var(--mds-shadow-sm);
+}
+
+.mds-version-badge.free {
+  background: var(--mds-success-100);
+  color: var(--mds-success-600);
+}
+
+.mds-version-badge .dashicons {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Tag/Pill */
+.mds-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mds-space-2);
+  padding: var(--mds-space-2) var(--mds-space-3);
+  font-size: var(--mds-text-sm);
+  background: var(--mds-surface-100);
+  color: var(--mds-text);
+  border: 1px solid var(--mds-border);
+  border-radius: var(--mds-radius);
+  cursor: default;
+}
+
+.mds-tag-removable {
+  cursor: pointer;
+}
+
+.mds-tag-removable:hover {
+  background: var(--mds-error-50);
+  border-color: var(--mds-error-200);
+}
+
+.mds-tag-close {
+  display: inline-flex;
+  font-size: 14px;
+  color: var(--mds-text-muted);
+  transition: color var(--mds-transition-fast);
+}
+
+.mds-tag-removable:hover .mds-tag-close {
+  color: var(--mds-error);
+}
+
+/* Count Badge */
+.mds-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 var(--mds-space-2);
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--mds-primary);
+  color: white;
+  border-radius: var(--mds-radius-full);
+}
+
+.mds-count-sm {
+  min-width: 16px;
+  height: 16px;
+  font-size: 10px;
+}
+
+/* Auto/Manual Badges */
+.mds-auto-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mds-space-1);
+  padding: var(--mds-space-1) var(--mds-space-2);
+  font-size: var(--mds-text-xs);
+  font-weight: 500;
+  background: linear-gradient(135deg, var(--mds-success-50), var(--mds-success-100));
+  color: var(--mds-success-600);
+  border-radius: var(--mds-radius-sm);
+}
+
+.mds-auto-badge .dashicons {
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
+}
+
+.mds-manual-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mds-space-1);
+  padding: var(--mds-space-1) var(--mds-space-2);
+  font-size: var(--mds-text-xs);
+  font-weight: 500;
+  background: var(--mds-surface-100);
+  color: var(--mds-text-secondary);
+  border-radius: var(--mds-radius-sm);
+}
+
+/* Fields Description */
+.mds-fields-description {
+  font-size: var(--mds-text-sm);
+  color: var(--mds-text-secondary);
+  margin-bottom: var(--mds-space-4);
+}
+
+

@@ -1,0 +1,199 @@
+/**
+ * Code Preview & Syntax Highlighting
+ */
+
+/* Code Preview Container */
+.mds-code-preview {
+  background: var(--mds-surface-900);
+  border-radius: var(--mds-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--mds-shadow-lg);
+}
+
+.mds-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--mds-space-3) var(--mds-space-4);
+  background: var(--mds-surface-800);
+  border-bottom: 1px solid var(--mds-surface-700);
+}
+
+.mds-code-title {
+  font-size: var(--mds-text-xs);
+  font-weight: 500;
+  color: var(--mds-surface-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mds-code-actions {
+  display: flex;
+  gap: var(--mds-space-2);
+}
+
+/* Schema Preview */
+.mds-schema-preview {
+  padding: var(--mds-space-5);
+  font-family: var(--mds-font-mono);
+  font-size: var(--mds-text-xs);
+  line-height: 1.7;
+  color: #e6e6e6;
+  background: var(--mds-surface-900);
+  max-height: 400px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  tab-size: 2;
+}
+
+/* Scrollbar styling for code */
+.mds-schema-preview::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.mds-schema-preview::-webkit-scrollbar-track {
+  background: var(--mds-surface-800);
+}
+
+.mds-schema-preview::-webkit-scrollbar-thumb {
+  background: var(--mds-surface-600);
+  border-radius: 4px;
+}
+
+.mds-schema-preview::-webkit-scrollbar-thumb:hover {
+  background: var(--mds-surface-500);
+}
+
+/* Preview Section */
+.mds-preview-section {
+  background: var(--mds-surface-50);
+  border-radius: var(--mds-radius-lg);
+  padding: var(--mds-space-5);
+  border: 1px solid var(--mds-border);
+}
+
+.mds-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--mds-space-4);
+}
+
+.mds-preview-header h4 {
+  font-size: var(--mds-text-sm);
+  font-weight: 600;
+  margin: 0;
+}
+
+.mds-preview-actions {
+  display: flex;
+  gap: var(--mds-space-2);
+}
+
+/* Log Preview */
+.mds-log-preview {
+  margin-top: var(--mds-space-4);
+}
+
+.mds-log-preview h4 {
+  font-size: var(--mds-text-sm);
+  font-weight: 600;
+  margin-bottom: var(--mds-space-3);
+}
+
+.mds-log-preview pre {
+  background: var(--mds-surface-900);
+  color: #e6e6e6;
+  padding: var(--mds-space-4);
+  border-radius: var(--mds-radius);
+  font-size: var(--mds-text-xs);
+  font-family: var(--mds-font-mono);
+  max-height: 240px;
+  overflow: auto;
+  line-height: 1.6;
+}
+
+.mds-log-info {
+  display: flex;
+  align-items: center;
+  gap: var(--mds-space-3);
+  margin: var(--mds-space-4) 0;
+  font-size: var(--mds-text-sm);
+  color: var(--mds-text-secondary);
+}
+
+/* Validation Status */
+.mds-validation-status {
+  margin-top: var(--mds-space-4);
+  padding: var(--mds-space-3) var(--mds-space-4);
+  border-radius: var(--mds-radius);
+  font-size: var(--mds-text-sm);
+}
+
+.mds-validation-status.valid {
+  background: var(--mds-success-50);
+  color: var(--mds-success-600);
+  border: 1px solid var(--mds-success-200);
+}
+
+.mds-validation-status.invalid {
+  background: var(--mds-error-50);
+  color: var(--mds-error-600);
+  border: 1px solid var(--mds-error-200);
+}
+
+.mds-validation-status .dashicons {
+  vertical-align: middle;
+  margin-right: var(--mds-space-2);
+}
+
+.mds-validation-status ul {
+  margin: var(--mds-space-3) 0 0 var(--mds-space-6);
+  padding: 0;
+  list-style: disc;
+}
+
+.mds-validation-status li {
+  margin-bottom: var(--mds-space-1);
+}
+
+.mds-validation-warnings {
+  margin-top: var(--mds-space-3);
+  padding: var(--mds-space-3) var(--mds-space-4);
+  background: var(--mds-warning-50);
+  border: 1px solid var(--mds-warning-200);
+  border-radius: var(--mds-radius);
+  color: var(--mds-warning-700);
+}
+
+.mds-validation-warnings ul {
+  margin: var(--mds-space-2) 0 0 var(--mds-space-6);
+  padding: 0;
+  list-style: disc;
+}
+
+/* Test Links */
+.mds-test-links {
+  display: flex;
+  gap: var(--mds-space-3);
+  margin-top: var(--mds-space-4);
+}
+
+.mds-test-links .button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--mds-space-2);
+}
+
+/* Inline Code */
+.mds-inline-code {
+  font-family: var(--mds-font-mono);
+  font-size: 0.875em;
+  padding: 2px 6px;
+  background: var(--mds-surface-100);
+  border-radius: var(--mds-radius-sm);
+  color: var(--mds-primary-700);
+}
+

@@ -1,0 +1,127 @@
+/**
+ * Table Components
+ */
+
+/* Base Table */
+.mds-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--mds-text-sm);
+}
+
+.mds-table th,
+.mds-table td {
+  padding: var(--mds-space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--mds-border);
+}
+
+.mds-table th {
+  font-weight: 600;
+  color: var(--mds-text);
+  background: var(--mds-surface-50);
+  font-size: var(--mds-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mds-table tr:last-child td {
+  border-bottom: none;
+}
+
+.mds-table tr:hover td {
+  background: var(--mds-surface-50);
+}
+
+.mds-table td small {
+  display: block;
+  color: var(--mds-text-muted);
+  margin-top: var(--mds-space-1);
+  font-size: var(--mds-text-xs);
+}
+
+/* Info Table */
+.mds-info-table {
+  width: 100%;
+  max-width: 560px;
+  border-collapse: collapse;
+}
+
+.mds-info-table th,
+.mds-info-table td {
+  padding: var(--mds-space-3) var(--mds-space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--mds-border);
+  font-size: var(--mds-text-sm);
+}
+
+.mds-info-table th {
+  font-weight: 500;
+  color: var(--mds-text-secondary);
+  width: 200px;
+}
+
+.mds-info-table td {
+  font-weight: 500;
+  color: var(--mds-text);
+}
+
+/* Status Icons in Tables */
+.mds-status-ok {
+  color: var(--mds-success);
+}
+
+.mds-status-warning {
+  color: var(--mds-warning);
+}
+
+.mds-status-error {
+  color: var(--mds-error);
+}
+
+/* Striped Table */
+.mds-table-striped tr:nth-child(even) td {
+  background: var(--mds-surface-50);
+}
+
+/* Bordered Table */
+.mds-table-bordered {
+  border: 1px solid var(--mds-border);
+  border-radius: var(--mds-radius);
+  overflow: hidden;
+}
+
+.mds-table-bordered th,
+.mds-table-bordered td {
+  border: 1px solid var(--mds-border);
+}
+
+/* Compact Table */
+.mds-table-compact th,
+.mds-table-compact td {
+  padding: var(--mds-space-2) var(--mds-space-3);
+  font-size: var(--mds-text-xs);
+}
+
+/* Responsive Table Container */
+.mds-table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Empty State */
+.mds-table-empty {
+  text-align: center;
+  padding: var(--mds-space-8);
+  color: var(--mds-text-muted);
+}
+
+.mds-table-empty .dashicons {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--mds-space-4);
+  opacity: 0.3;
+}
+
+

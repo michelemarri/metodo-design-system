@@ -1,0 +1,237 @@
+/**
+ * Button Components
+ */
+
+/* Base Button */
+.mds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--mds-space-2);
+  padding: var(--mds-space-3) var(--mds-space-5);
+  font-family: inherit;
+  font-size: var(--mds-text-sm);
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--mds-radius);
+  cursor: pointer;
+  transition: all var(--mds-transition);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.mds-btn:focus-visible {
+  outline: 2px solid var(--mds-primary);
+  outline-offset: 2px;
+}
+
+.mds-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mds-btn .dashicons {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Primary Button */
+.mds-btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--mds-primary-600), var(--mds-primary-700));
+  border-color: var(--mds-primary-700);
+  box-shadow: var(--mds-shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.mds-btn-primary:hover {
+  background: linear-gradient(135deg, var(--mds-primary-700), var(--mds-primary-800));
+  box-shadow: var(--mds-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.mds-btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--mds-shadow-xs);
+}
+
+/* Secondary Button */
+.mds-btn-secondary {
+  color: var(--mds-text);
+  background: var(--mds-bg-elevated);
+  border-color: var(--mds-border);
+  box-shadow: var(--mds-shadow-xs);
+}
+
+.mds-btn-secondary:hover {
+  background: var(--mds-surface-50);
+  border-color: var(--mds-border-hover);
+  box-shadow: var(--mds-shadow-sm);
+}
+
+/* Ghost Button */
+.mds-btn-ghost {
+  color: var(--mds-text-secondary);
+  background: transparent;
+  border-color: transparent;
+}
+
+.mds-btn-ghost:hover {
+  color: var(--mds-text);
+  background: var(--mds-surface-100);
+}
+
+/* Accent Button */
+.mds-btn-accent {
+  color: #fff;
+  background: linear-gradient(135deg, var(--mds-accent-500), var(--mds-accent-600));
+  border-color: var(--mds-accent-600);
+}
+
+.mds-btn-accent:hover {
+  background: linear-gradient(135deg, var(--mds-accent-600), var(--mds-accent-700));
+}
+
+/* Success Button */
+.mds-btn-success {
+  color: #fff;
+  background: linear-gradient(135deg, var(--mds-success-500), var(--mds-success-600));
+  border-color: var(--mds-success-600);
+}
+
+.mds-btn-success:hover {
+  background: linear-gradient(135deg, var(--mds-success-600), var(--mds-success-700));
+}
+
+/* Danger Button */
+.mds-btn-danger {
+  color: #fff;
+  background: linear-gradient(135deg, var(--mds-error-500), var(--mds-error-600));
+  border-color: var(--mds-error-600);
+}
+
+.mds-btn-danger:hover {
+  background: linear-gradient(135deg, var(--mds-error-600), var(--mds-error-700));
+}
+
+/* Link Button */
+.mds-btn-link {
+  color: var(--mds-primary);
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.mds-btn-link:hover {
+  color: var(--mds-primary-hover);
+  text-decoration: underline;
+}
+
+/* Button Sizes */
+.mds-btn-sm {
+  padding: var(--mds-space-2) var(--mds-space-3);
+  font-size: var(--mds-text-xs);
+}
+
+.mds-btn-sm .dashicons {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
+
+.mds-btn-lg {
+  padding: var(--mds-space-4) var(--mds-space-6);
+  font-size: var(--mds-text-base);
+}
+
+/* Icon Only Button */
+.mds-btn-icon {
+  padding: var(--mds-space-2);
+  min-width: 36px;
+  min-height: 36px;
+}
+
+.mds-btn-icon.mds-btn-sm {
+  min-width: 28px;
+  min-height: 28px;
+  padding: var(--mds-space-1);
+}
+
+/* Button Group */
+.mds-btn-group {
+  display: inline-flex;
+}
+
+.mds-btn-group .mds-btn {
+  border-radius: 0;
+}
+
+.mds-btn-group .mds-btn:first-child {
+  border-radius: var(--mds-radius) 0 0 var(--mds-radius);
+}
+
+.mds-btn-group .mds-btn:last-child {
+  border-radius: 0 var(--mds-radius) var(--mds-radius) 0;
+}
+
+.mds-btn-group .mds-btn:not(:last-child) {
+  border-right-width: 0;
+}
+
+/* Loading State */
+.mds-btn.loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.mds-btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: mds-spin 0.6s linear infinite;
+}
+
+.mds-btn-primary.loading::after {
+  border-color: rgba(255, 255, 255, 0.3);
+  border-right-color: transparent;
+}
+
+/* WordPress Admin Button Override */
+.mds-wrap .button.button-primary {
+  background: linear-gradient(135deg, var(--mds-primary-600), var(--mds-primary-700)) !important;
+  border-color: var(--mds-primary-700) !important;
+  box-shadow: var(--mds-shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  border-radius: var(--mds-radius) !important;
+  padding: var(--mds-space-3) var(--mds-space-5) !important;
+  height: auto !important;
+  font-weight: 500 !important;
+  transition: all var(--mds-transition) !important;
+}
+
+.mds-wrap .button.button-primary:hover {
+  background: linear-gradient(135deg, var(--mds-primary-700), var(--mds-primary-800)) !important;
+  box-shadow: var(--mds-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-1px);
+}
+
+.mds-wrap .button:not(.button-primary) {
+  background: var(--mds-bg-elevated) !important;
+  border-color: var(--mds-border) !important;
+  border-radius: var(--mds-radius) !important;
+  box-shadow: var(--mds-shadow-xs) !important;
+  transition: all var(--mds-transition) !important;
+}
+
+.mds-wrap .button:not(.button-primary):hover {
+  background: var(--mds-surface-50) !important;
+  border-color: var(--mds-border-hover) !important;
+}
+
+

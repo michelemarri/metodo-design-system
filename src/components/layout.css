@@ -1,0 +1,302 @@
+/**
+ * Layout Components
+ */
+
+/* Main Container */
+.mds-wrap {
+  max-width: 1280px;
+  margin: 20px auto;
+  padding: 0 var(--mds-space-6);
+}
+
+/* Hero Banner */
+.mds-hero {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: var(--mds-radius-xl);
+  overflow: hidden;
+  margin-bottom: var(--mds-space-8);
+  box-shadow: var(--mds-shadow-lg);
+}
+
+.mds-hero-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mds-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--mds-space-8);
+}
+
+.mds-hero-title {
+  font-size: var(--mds-text-3xl);
+  font-weight: 700;
+  color: #ffffff !important;
+  margin: 0 0 var(--mds-space-2) 0;
+  letter-spacing: -0.025em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mds-hero-description {
+  font-size: var(--mds-text-lg);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  max-width: 600px;
+}
+
+.mds-hero-version {
+  position: absolute;
+  top: var(--mds-space-4);
+  right: var(--mds-space-4);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: var(--mds-space-1) var(--mds-space-3);
+  border-radius: var(--mds-radius-full);
+  font-size: var(--mds-text-sm);
+  font-weight: 600;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Page Header */
+.mds-page-header {
+  margin-bottom: var(--mds-space-8);
+}
+
+.mds-page-title {
+  display: flex;
+  align-items: center;
+  gap: var(--mds-space-4);
+  font-size: var(--mds-text-3xl);
+  font-weight: 700;
+  color: var(--mds-text);
+  margin-bottom: var(--mds-space-2);
+  letter-spacing: -0.025em;
+}
+
+/* Logo Icon */
+.mds-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--mds-primary);
+  border-radius: var(--mds-radius-lg);
+  color: #fff;
+  box-shadow: var(--mds-shadow), var(--mds-shadow-glow);
+  transition: transform var(--mds-transition), box-shadow var(--mds-transition);
+}
+
+.mds-logo:hover {
+  transform: scale(1.05);
+  box-shadow: var(--mds-shadow-lg), 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.mds-logo svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Page Description */
+.mds-description {
+  font-size: var(--mds-text-lg);
+  color: var(--mds-text-secondary);
+  max-width: 600px;
+}
+
+/* Section */
+.mds-section {
+  margin-bottom: var(--mds-space-8);
+}
+
+.mds-section-header {
+  margin-bottom: var(--mds-space-4);
+}
+
+.mds-section-title {
+  font-size: var(--mds-text-xl);
+  font-weight: 600;
+  color: var(--mds-text);
+  margin-bottom: var(--mds-space-1);
+}
+
+.mds-section-description {
+  font-size: var(--mds-text-sm);
+  color: var(--mds-text-secondary);
+}
+
+/* Grid Layouts */
+.mds-grid {
+  display: grid;
+  gap: var(--mds-space-6);
+}
+
+.mds-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mds-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mds-grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Flex Layouts */
+.mds-flex {
+  display: flex;
+}
+
+.mds-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mds-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mds-gap-2 {
+  gap: var(--mds-space-2);
+}
+
+.mds-gap-3 {
+  gap: var(--mds-space-3);
+}
+
+.mds-gap-4 {
+  gap: var(--mds-space-4);
+}
+
+/* Content Area */
+.mds-content {
+  background: var(--mds-bg-elevated);
+  border-radius: var(--mds-radius-xl);
+  box-shadow: var(--mds-shadow);
+  padding: var(--mds-space-8);
+  border: 1px solid var(--mds-border);
+}
+
+/* Quick Start / Steps */
+.mds-quick-start {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--mds-space-6);
+  margin-bottom: var(--mds-space-8);
+}
+
+.mds-step {
+  display: flex;
+  gap: var(--mds-space-4);
+  padding: var(--mds-space-6);
+  background: linear-gradient(135deg, var(--mds-surface-50), var(--mds-surface-100));
+  border-radius: var(--mds-radius-lg);
+  border: 1px solid var(--mds-border);
+  transition: transform var(--mds-transition), box-shadow var(--mds-transition);
+}
+
+.mds-step:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--mds-shadow-lg);
+}
+
+.mds-step-number {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--mds-primary-600), var(--mds-primary-700));
+  color: white;
+  border-radius: var(--mds-radius-full);
+  font-weight: 700;
+  font-size: var(--mds-text-lg);
+  box-shadow: var(--mds-shadow-sm);
+}
+
+.mds-step-content h4 {
+  font-size: var(--mds-text-base);
+  font-weight: 600;
+  margin-bottom: var(--mds-space-1);
+}
+
+.mds-step-content p {
+  font-size: var(--mds-text-sm);
+  color: var(--mds-text-secondary);
+  line-height: 1.5;
+}
+
+/* Info Grid */
+.mds-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--mds-space-4);
+  margin-bottom: var(--mds-space-4);
+}
+
+.mds-info-item {
+  padding: var(--mds-space-4);
+  background: var(--mds-surface-50);
+  border-radius: var(--mds-radius);
+  border: 1px solid var(--mds-border);
+}
+
+.mds-info-label {
+  display: block;
+  font-size: var(--mds-text-xs);
+  font-weight: 500;
+  color: var(--mds-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--mds-space-1);
+}
+
+.mds-info-value {
+  font-size: var(--mds-text-sm);
+  font-weight: 600;
+  color: var(--mds-text);
+  word-break: break-word;
+}
+
+/* Footer */
+.mds-footer {
+  text-align: center;
+  padding: var(--mds-space-8) var(--mds-space-6);
+  color: var(--mds-text-muted);
+  font-size: var(--mds-text-sm);
+}
+
+.mds-footer a {
+  color: var(--mds-primary);
+  font-weight: 500;
+}
+
+.mds-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Actions */
+.mds-actions {
+  margin-top: var(--mds-space-8);
+  padding-top: var(--mds-space-6);
+  border-top: 1px solid var(--mds-border);
+  display: flex;
+  gap: var(--mds-space-3);
+}
+
+
