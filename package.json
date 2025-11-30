@@ -27,10 +27,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOURUSERNAME/metodo-design-system.git"
+    "url": "https://github.com/michelemarri/metodo-design-system.git"
   },
   "author": "Michele Marri <info@metodo.dev>",
-  "license": "MIT"
+  "license": "GPL-3.0"
 }
 
 
