@@ -30,6 +30,7 @@
 }
 
 @media (max-width: 600px) {
+
   .mds-stats-grid,
   .mds-stats-grid-3,
   .mds-stats-grid-2 {
@@ -134,7 +135,7 @@
 }
 
 /* Icon Color Variants */
-.mds-stat-icon-primary {
+.mds-stat-icon-default {
   background: var(--mds-primary-100);
   color: var(--mds-primary);
 }
@@ -377,4 +378,3 @@
 .mds-quick-link:hover .dashicons {
   color: var(--mds-primary);
 }
-
