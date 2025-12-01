@@ -30,23 +30,23 @@
   flex-direction: column;
 }
 
-.mds-stack > * + * {
+.mds-stack>*+* {
   margin-top: var(--mds-space-4);
 }
 
-.mds-stack-sm > * + * {
+.mds-stack-sm>*+* {
   margin-top: var(--mds-space-2);
 }
 
-.mds-stack-md > * + * {
+.mds-stack-md>*+* {
   margin-top: var(--mds-space-4);
 }
 
-.mds-stack-lg > * + * {
+.mds-stack-lg>*+* {
   margin-top: var(--mds-space-6);
 }
 
-.mds-stack-xl > * + * {
+.mds-stack-xl>*+* {
   margin-top: var(--mds-space-8);
 }
 
@@ -106,7 +106,7 @@
   gap: var(--mds-space-4);
 }
 
-.mds-switcher > * {
+.mds-switcher>* {
   flex-grow: 1;
   flex-basis: calc((40rem - 100%) * 999);
 }
@@ -121,12 +121,12 @@
   gap: var(--mds-space-6);
 }
 
-.mds-with-sidebar > :first-child {
+.mds-with-sidebar> :first-child {
   flex-basis: 300px;
   flex-grow: 1;
 }
 
-.mds-with-sidebar > :last-child {
+.mds-with-sidebar> :last-child {
   flex-basis: 0;
   flex-grow: 999;
   min-inline-size: 50%;
@@ -244,10 +244,6 @@
 }
 
 /* Section */
-.mds-section {
-  margin-bottom: var(--mds-space-8);
-}
-
 .mds-section-header {
   margin-bottom: var(--mds-space-4);
 }
@@ -294,6 +290,7 @@
 }
 
 @media (max-width: 1024px) {
+
   .mds-grid-2,
   .mds-grid-3,
   .mds-grid-4 {
@@ -302,6 +299,7 @@
 }
 
 @media (max-width: 640px) {
+
   .mds-grid-2,
   .mds-grid-3,
   .mds-grid-4 {
@@ -313,14 +311,37 @@
    Gap Utilities
    ======================================== */
 
-.mds-gap-0 { gap: 0; }
-.mds-gap-1 { gap: var(--mds-space-1); }
-.mds-gap-2 { gap: var(--mds-space-2); }
-.mds-gap-3 { gap: var(--mds-space-3); }
-.mds-gap-4 { gap: var(--mds-space-4); }
-.mds-gap-5 { gap: var(--mds-space-5); }
-.mds-gap-6 { gap: var(--mds-space-6); }
-.mds-gap-8 { gap: var(--mds-space-8); }
+.mds-gap-0 {
+  gap: 0;
+}
+
+.mds-gap-1 {
+  gap: var(--mds-space-1);
+}
+
+.mds-gap-2 {
+  gap: var(--mds-space-2);
+}
+
+.mds-gap-3 {
+  gap: var(--mds-space-3);
+}
+
+.mds-gap-4 {
+  gap: var(--mds-space-4);
+}
+
+.mds-gap-5 {
+  gap: var(--mds-space-5);
+}
+
+.mds-gap-6 {
+  gap: var(--mds-space-6);
+}
+
+.mds-gap-8 {
+  gap: var(--mds-space-8);
+}
 
 /* ========================================
    Flex Utilities
@@ -480,5 +501,3 @@
   display: flex;
   gap: var(--mds-space-3);
 }
-
-
