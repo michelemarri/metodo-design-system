@@ -8,6 +8,17 @@
   border-radius: var(--mds-radius-lg);
   overflow: hidden;
   transition: border-color var(--mds-transition), box-shadow var(--mds-transition);
+  margin-bottom: var(--mds-space-6);
+}
+
+.mds-card:last-child {
+  margin-bottom: 0;
+}
+
+/* Reset margin when inside flex containers with gap */
+.mds-page>.mds-card,
+.mds-stack-gap>.mds-card {
+  margin-bottom: 0;
 }
 
 .mds-card:hover {
@@ -142,13 +153,15 @@
   align-items: start;
 }
 
-.mds-cards-grid > .mds-card {
+.mds-cards-grid>.mds-card {
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 0;
+  /* Reset margin when in grid - gap handles spacing */
 }
 
-.mds-cards-grid > .mds-card .mds-card-body {
+.mds-cards-grid>.mds-card .mds-card-body {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -338,5 +351,3 @@
   width: 20px;
   height: 20px;
 }
-
-
