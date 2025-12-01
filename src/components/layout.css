@@ -143,6 +143,7 @@
   border-radius: var(--mds-radius-xl);
   overflow: hidden;
   box-shadow: var(--mds-shadow-lg);
+  /* No margin-bottom - use .mds-page gap instead */
 }
 
 .mds-hero-banner {
@@ -197,7 +198,7 @@
    ======================================== */
 
 .mds-page-header {
-  /* No bottom margin - use .mds-page gap instead */
+  /* No margin - use .mds-page gap for spacing */
 }
 
 .mds-page-title {

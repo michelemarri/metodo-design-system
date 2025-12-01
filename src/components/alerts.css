@@ -45,6 +45,67 @@
   margin-top: var(--mds-space-3);
 }
 
+/* Contextual Button Styles for Alerts */
+.mds-alert-warning .mds-btn,
+.mds-alert-warning .mds-btn-primary {
+  background: linear-gradient(135deg, var(--mds-warning-600), var(--mds-warning-700));
+  border-color: var(--mds-warning-700);
+  color: #fff;
+  box-shadow: var(--mds-shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.mds-alert-warning .mds-btn:hover,
+.mds-alert-warning .mds-btn-primary:hover {
+  background: linear-gradient(135deg, var(--mds-warning-700), var(--mds-warning-800));
+  box-shadow: var(--mds-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.mds-alert-info .mds-btn,
+.mds-alert-info .mds-btn-primary {
+  background: linear-gradient(135deg, var(--mds-primary-600), var(--mds-primary-700));
+  border-color: var(--mds-primary-700);
+  color: #fff;
+  box-shadow: var(--mds-shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.mds-alert-info .mds-btn:hover,
+.mds-alert-info .mds-btn-primary:hover {
+  background: linear-gradient(135deg, var(--mds-primary-700), var(--mds-primary-800));
+  box-shadow: var(--mds-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.mds-alert-success .mds-btn,
+.mds-alert-success .mds-btn-primary {
+  background: linear-gradient(135deg, var(--mds-success-500), var(--mds-success-600));
+  border-color: var(--mds-success-600);
+  color: #fff;
+  box-shadow: var(--mds-shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.mds-alert-success .mds-btn:hover,
+.mds-alert-success .mds-btn-primary:hover {
+  background: linear-gradient(135deg, var(--mds-success-600), var(--mds-success-700));
+  box-shadow: var(--mds-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.mds-alert-error .mds-btn,
+.mds-alert-error .mds-btn-primary {
+  background: linear-gradient(135deg, var(--mds-error-500), var(--mds-error-600));
+  border-color: var(--mds-error-600);
+  color: #fff;
+  box-shadow: var(--mds-shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.mds-alert-error .mds-btn:hover,
+.mds-alert-error .mds-btn-primary:hover {
+  background: linear-gradient(135deg, var(--mds-error-600), var(--mds-error-700));
+  box-shadow: var(--mds-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
 /* Alert Variants */
 .mds-alert-info {
   background: linear-gradient(135deg, var(--mds-primary-50), var(--mds-primary-100));
