@@ -1,22 +1,147 @@
 /**
  * Layout Components
+ * 
+ * Modern CSS layout primitives using flexbox and grid.
  */
 
-/* Main Container */
+/* ========================================
+   Page Container
+   ======================================== */
+
 .mds-wrap {
   max-width: 1280px;
   margin: 20px auto;
   padding: 0 var(--mds-space-6);
 }
 
-/* Hero Banner */
+/* Page Layout - vertical stack for entire page */
+.mds-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mds-space-6);
+}
+
+/* ========================================
+   Stack (Vertical Flow)
+   ======================================== */
+
+.mds-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.mds-stack > * + * {
+  margin-top: var(--mds-space-4);
+}
+
+.mds-stack-sm > * + * {
+  margin-top: var(--mds-space-2);
+}
+
+.mds-stack-md > * + * {
+  margin-top: var(--mds-space-4);
+}
+
+.mds-stack-lg > * + * {
+  margin-top: var(--mds-space-6);
+}
+
+.mds-stack-xl > * + * {
+  margin-top: var(--mds-space-8);
+}
+
+/* Stack with gap (no margin needed) */
+.mds-stack-gap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mds-space-6);
+}
+
+.mds-stack-gap-sm {
+  gap: var(--mds-space-3);
+}
+
+.mds-stack-gap-lg {
+  gap: var(--mds-space-8);
+}
+
+/* ========================================
+   Cluster (Horizontal Wrap)
+   ======================================== */
+
+.mds-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mds-space-3);
+  align-items: center;
+}
+
+.mds-cluster-sm {
+  gap: var(--mds-space-2);
+}
+
+.mds-cluster-lg {
+  gap: var(--mds-space-4);
+}
+
+.mds-cluster-between {
+  justify-content: space-between;
+}
+
+.mds-cluster-end {
+  justify-content: flex-end;
+}
+
+.mds-cluster-start {
+  justify-content: flex-start;
+}
+
+/* ========================================
+   Switcher (Responsive Stack/Row)
+   ======================================== */
+
+.mds-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mds-space-4);
+}
+
+.mds-switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((40rem - 100%) * 999);
+}
+
+/* ========================================
+   Sidebar Layout
+   ======================================== */
+
+.mds-with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mds-space-6);
+}
+
+.mds-with-sidebar > :first-child {
+  flex-basis: 300px;
+  flex-grow: 1;
+}
+
+.mds-with-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+
+/* ========================================
+   Hero Banner
+   ======================================== */
+
 .mds-hero {
   position: relative;
   width: 100%;
   height: 200px;
   border-radius: var(--mds-radius-xl);
   overflow: hidden;
-  margin-bottom: var(--mds-space-8);
   box-shadow: var(--mds-shadow-lg);
 }
 
@@ -67,9 +192,12 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Page Header */
+/* ========================================
+   Page Header
+   ======================================== */
+
 .mds-page-header {
-  margin-bottom: var(--mds-space-8);
+  /* No bottom margin - use .mds-page gap instead */
 }
 
 .mds-page-title {
@@ -135,7 +263,10 @@
   color: var(--mds-text-secondary);
 }
 
-/* Grid Layouts */
+/* ========================================
+   Grid Layouts
+   ======================================== */
+
 .mds-grid {
   display: grid;
   gap: var(--mds-space-6);
@@ -149,13 +280,62 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.mds-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .mds-grid-auto {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
-/* Flex Layouts */
+.mds-grid-auto-sm {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media (max-width: 1024px) {
+  .mds-grid-2,
+  .mds-grid-3,
+  .mds-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .mds-grid-2,
+  .mds-grid-3,
+  .mds-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   Gap Utilities
+   ======================================== */
+
+.mds-gap-0 { gap: 0; }
+.mds-gap-1 { gap: var(--mds-space-1); }
+.mds-gap-2 { gap: var(--mds-space-2); }
+.mds-gap-3 { gap: var(--mds-space-3); }
+.mds-gap-4 { gap: var(--mds-space-4); }
+.mds-gap-5 { gap: var(--mds-space-5); }
+.mds-gap-6 { gap: var(--mds-space-6); }
+.mds-gap-8 { gap: var(--mds-space-8); }
+
+/* ========================================
+   Flex Utilities
+   ======================================== */
+
 .mds-flex {
   display: flex;
+}
+
+.mds-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.mds-flex-wrap {
+  flex-wrap: wrap;
 }
 
 .mds-flex-between {
@@ -170,16 +350,17 @@
   justify-content: center;
 }
 
-.mds-gap-2 {
-  gap: var(--mds-space-2);
+.mds-flex-start {
+  display: flex;
+  align-items: flex-start;
 }
 
-.mds-gap-3 {
-  gap: var(--mds-space-3);
+.mds-flex-1 {
+  flex: 1;
 }
 
-.mds-gap-4 {
-  gap: var(--mds-space-4);
+.mds-shrink-0 {
+  flex-shrink: 0;
 }
 
 /* Content Area */

@@ -75,6 +75,10 @@
   font-size: var(--mds-text-base);
 }
 
+.mds-input-auto {
+  width: auto;
+}
+
 /* Select */
 .mds-select {
   width: 100%;
@@ -103,6 +107,17 @@
   border-color: var(--mds-primary);
   box-shadow: 0 0 0 3px var(--mds-primary-100);
   outline: none;
+}
+
+.mds-select-auto {
+  width: auto;
+  min-width: 140px;
+}
+
+.mds-select-sm {
+  padding: var(--mds-space-2) var(--mds-space-3);
+  padding-right: var(--mds-space-8);
+  font-size: var(--mds-text-xs);
 }
 
 /* Textarea */

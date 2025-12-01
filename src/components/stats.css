@@ -105,6 +105,16 @@
 .mds-stat-icon svg {
   width: 22px;
   height: 22px;
+  flex-shrink: 0;
+}
+
+.mds-stat-icon .dashicons {
+  font-size: 22px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mds-stat-card-lg .mds-stat-icon {
@@ -113,6 +123,12 @@
 }
 
 .mds-stat-card-lg .mds-stat-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.mds-stat-card-lg .mds-stat-icon .dashicons {
+  font-size: 26px;
   width: 26px;
   height: 26px;
 }
@@ -345,14 +361,20 @@
   box-shadow: var(--mds-shadow-sm);
 }
 
-.mds-quick-link svg {
+.mds-quick-link svg,
+.mds-quick-link .dashicons {
   width: 20px;
   height: 20px;
   color: var(--mds-text-tertiary);
   transition: color var(--mds-transition);
 }
 
-.mds-quick-link:hover svg {
+.mds-quick-link .dashicons {
+  font-size: 20px;
+}
+
+.mds-quick-link:hover svg,
+.mds-quick-link:hover .dashicons {
   color: var(--mds-primary);
 }
 

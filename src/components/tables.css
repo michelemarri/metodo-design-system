@@ -109,19 +109,65 @@
   -webkit-overflow-scrolling: touch;
 }
 
-/* Empty State */
+/* ========================================
+   Column Width Utilities
+   ======================================== */
+
+.mds-w-datetime { width: 180px; }
+.mds-w-badge { width: 100px; }
+.mds-w-label { width: 130px; }
+.mds-w-file { width: 220px; }
+.mds-w-size { width: 100px; }
+.mds-w-user { width: 150px; }
+.mds-w-actions { width: 120px; }
+
+/* ========================================
+   Empty State
+   ======================================== */
+
 .mds-table-empty {
   text-align: center;
-  padding: var(--mds-space-8);
-  color: var(--mds-text-muted);
+  padding: var(--mds-space-12) var(--mds-space-6);
+  color: var(--mds-text-secondary);
 }
 
-.mds-table-empty .dashicons {
+.mds-table-empty p {
+  margin: 0 0 var(--mds-space-2);
+  font-weight: 500;
+}
+
+.mds-empty-icon {
+  display: block;
   font-size: 48px;
   width: 48px;
   height: 48px;
-  margin-bottom: var(--mds-space-4);
-  opacity: 0.3;
+  margin: 0 auto var(--mds-space-4);
+  color: var(--mds-surface-300);
+}
+
+/* ========================================
+   Live Indicator
+   ======================================== */
+
+.mds-live-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--mds-space-2);
+  color: var(--mds-success);
+  font-size: var(--mds-text-sm);
+}
+
+.mds-live-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--mds-success);
+  border-radius: 50%;
+  animation: mds-pulse 2s infinite;
+}
+
+@keyframes mds-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.9); }
 }
 
 
